@@ -1,7 +1,18 @@
 {
   "compilerOptions": {
+    // "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"], // if there is a problem, comment this
+      // "@/*": ["./src/*"],
+      // "@/public": ["public/*"],
+      // "@/layout/*": ["src/layout/*"],
+      // "@/components/*": ["./src/components"],
+      // "@/styles/*": ["src/styles/*"],
+      // "@/templates/*": ["src/components/templates/*"],
+      // "@/modules/*": ["src/components/modules/*"],
+      // "@/elements/*": ["src/components/elements/*"],
+      // "@/utils/*": ["src/utils/*"],
+      // "@/constants/*": ["src/constants/*"]
     }
   }
 }
