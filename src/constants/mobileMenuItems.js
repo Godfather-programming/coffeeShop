@@ -1,4 +1,4 @@
-const mobileMenuItem1 = [
+const mobileMenuItems1 = [
   {
     id: 1,
     title: "صفحه اصلی",
@@ -66,7 +66,7 @@ const mobileMenuItem1 = [
 
   {
     id: 4,
-    title: "درباره ما",
+    title: "بلاگ",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -88,28 +88,6 @@ const mobileMenuItem1 = [
 
   {
     id: 5,
-    title: "بلاگ",
-    svg: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-        className="size-6"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
-        />
-      </svg>
-    ),
-    selected: false,
-  },
-
-  {
-    id: 6,
     title: "تماس با ما",
     svg: (
       <svg
@@ -129,12 +107,9 @@ const mobileMenuItem1 = [
     ),
     selected: false,
   },
-];
-
-const mobileMenuItem2 = [
   {
-    id: 1,
-    title: " ورود | ثبت نام",
+    id: 6,
+    title: "درباره ما",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -143,6 +118,30 @@ const mobileMenuItem2 = [
         strokeWidth="1.5"
         stroke="currentColor"
         className="size-6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+        />
+      </svg>
+    ),
+    selected: false,
+  },
+];
+
+const mobileMenuItems2 = [
+  {
+    id: 1,
+    title: "ورود | ثبت نام",
+    svg: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="currentColor"
+        className="h-full w-full"
       >
         <path
           strokeLinecap="round"
@@ -156,7 +155,7 @@ const mobileMenuItem2 = [
   {
     id: 2,
     // title: document.documentElement.classList.contains("dark") === false ? "تم تیره" : "تم روشن",
-    title: "تم تیره", 
+    title: "تم تیره",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +163,7 @@ const mobileMenuItem2 = [
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="size-6"
+        className="h-full w-full"
       >
         <path
           strokeLinecap="round"
@@ -198,4 +197,4 @@ const mobileMenuItem2 = [
   },
 ];
 
-export { mobileMenuItem1, mobileMenuItem2 };
+export { mobileMenuItems1, mobileMenuItems2 };

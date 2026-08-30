@@ -60,7 +60,7 @@ const headerShoppingCartSvg = (
     viewBox="0 0 24 24"
     strokeWidth="1.5"
     stroke="currentColor"
-    className="size-9 dark:text-white"
+    className="h-full w-full"
   >
     <path
       strokeLinecap="round"
