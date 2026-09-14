@@ -16,7 +16,7 @@ function Contact() {
               height={120}
               alt="contact-photo"
               src={`${BASE_PATH}/images/contact.png`}
-              className="h-full w-full object-contain md:object-fill lg:object-contain object-center"
+              className="h-full w-full object-contain object-center md:object-fill lg:object-contain"
             />
           </div>
         </div>
@@ -47,7 +47,7 @@ function Contact() {
           </p>
           <Link
             href="#"
-            className="mt-5 md:mt-6 flex w-fit items-center justify-center gap-x-2 rounded-full border md:border-2 border-orange-300 px-5 py-3 font-Dana tracking-tightest text-orange-300 lg:text-xl"
+            className="mt-5 flex w-fit items-center justify-center gap-x-2 rounded-full border border-orange-300 px-5 py-3 font-Dana tracking-tightest text-orange-300 md:mt-6 md:border-2 lg:text-xl"
           >
             <TbPhoneCalling className="size-5.75 md:size-7" />
             {"  "}
