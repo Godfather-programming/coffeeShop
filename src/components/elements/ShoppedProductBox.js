@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BASE_PATH } from "@/src/config/site";
+import { BASE_PATH } from "../../config/site";
 import React from "react";
 
 function ShoppedProductBox({
