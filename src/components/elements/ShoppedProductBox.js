@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BASE_PATH } from "@/src/config/site";
 import React from "react";
 
 function ShoppedProductBox({
@@ -16,7 +17,7 @@ function ShoppedProductBox({
       <div className="mt-4 flex items-center justify-center p-2 pb-0 text-zinc-700">
         <div className={`shrink-0`}>
           <Image
-            src={item.img}
+            src={`${BASE_PATH}/${item.img}`}
             alt="product-photo"
             width={Number(sizeImg)}
             height={Number(sizeImg)}
