@@ -17,7 +17,7 @@ function ShoppedProductBox({
       <div className="mt-4 flex items-center justify-center p-2 pb-0 text-zinc-700">
         <div className={`shrink-0`}>
           <Image
-            src={`${BASE_PATH}/${item.img}`}
+            src={`${BASE_PATH}${item.img}`}
             alt="product-photo"
             width={Number(sizeImg)}
             height={Number(sizeImg)}
