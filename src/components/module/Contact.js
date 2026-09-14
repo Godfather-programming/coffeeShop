@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BASE_PATH } from "@/src/config/site";
+import { BASE_PATH } from "../../config/site";
 import React from "react";
 import { TbPhoneCalling } from "react-icons/tb";
 import Services from "./AboutUs";
 
 function Contact() {
+  console.log(BASE_PATH);
   return (
     <section id="تماس با ما">
       <div className="container mb-20 md:flex md:gap-x-5 xl:gap-x-0">

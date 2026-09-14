@@ -1,6 +1,6 @@
 import { headerShoppingCartSvg } from "@/src/constants/headerSvgs";
 import { arrowsRightLeft, star } from "@/src/constants/homePageSvgs";
-import { BASE_PATH } from "@/src/config/site";
+import { BASE_PATH } from "../../config/site";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

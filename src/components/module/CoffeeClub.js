@@ -1,6 +1,6 @@
 import coffeeClubEvents from "@/src/constants/coffeeClubEvents";
 import { chevronLeft } from "@/src/constants/chevrons";
-import { BASE_PATH } from "@/src/config/site";
+import { BASE_PATH } from "../../config/site";
 import Image from "next/image";
 import React from "react";
 import CoffeeClubEventElement from "../elements/CoffeeClubEventElement";
