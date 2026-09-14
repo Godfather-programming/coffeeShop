@@ -6,7 +6,7 @@ import articleItems from "@/src/constants/articleItems";
 function ReadingArticles() {
   return (
     <section id="بلاگ">
-      <div className="container mt-8 mb-20 lg:mt-16">
+      <div className="container mt-8 mb-20 md:mt-15">
         <div className="flex items-center justify-between font-Dana">
           <h2 className="text-2xl font-semibold lg:text-5xl dark:text-white">
             {" "}
@@ -19,7 +19,7 @@ function ReadingArticles() {
           </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:mt-12 lg:grid-cols-4">
+        <div className="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:mt-6 lg:grid-cols-4">
           {articleItems.map((article) => (
             <Article
               key={article.id}

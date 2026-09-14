@@ -19,9 +19,12 @@ function Introduction({
   hamburgerHandler,
   openShoppingCart,
   openShoppingCartHandler,
+  setOpenShoppingCart,
+  setOpen,
 }) {
   const [mobileItems1, setMobileItems1] = useState(mobileMenuItems1);
   const [mobileItems2, setMobileItems2] = useState(mobileMenuItems2);
+  const [list, setList] = useState(false);
 
   const clickHandler = (
     id,
@@ -34,6 +37,10 @@ function Introduction({
       ...item,
       selected: item.id === id,
     }));
+
+    // if(id === 2) setList(!list)
+
+    // console.log(list);
 
     setMobileItems1(newItems);
 
@@ -56,42 +63,45 @@ function Introduction({
     <>
       <section
         id="صفحه اصلی"
-        className="relative aspect-390/200 w-full overflow-hidden bg-home-mobile bg-cover bg-center bg-no-repeat max-xs:h-75 lg:bg-home-desktop"
+        className="relative z-10 flex aspect-2/1 w-full items-center justify-end"
       >
-        <div className="container ml-6 flex h-full w-5/10 flex-col justify-center gap-y-2.25 text-white xs:w-5/10 xl:w-5/10 2xl:w-4/10">
-          <h2 className="font-Morabba text-base font-bold sm:text-4xl xl:text-6xl">
-            {" "}
-            قهوه عربیکا تانزانیا{" "}
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute inset-0 bg-home-mobile bg-cover bg-center bg-no-repeat lg:bg-home-desktop" />
+        </div>
+
+        {/* Main Content */}
+        <div className="container ml-0 flex overflow-hidden h-full w-5/10 flex-col justify-center gap-y-2.25 text-white xs:w-5/10">
+          <h2 className="font-Morabba text-base font-bold sm:text-4xl md:mt-14 lg:mt-0 xl:text-6xl">
+            قهوه عربیکا تانزانیا
           </h2>
+
           <h4 className="font-Morabba text-sm font-light sm:text-2xl lg:mt-1.5 xl:text-5xl">
-            {" "}
-            یک فنجان بالانس!{" "}
+            یک فنجان بالانس!
           </h4>
-          <span className="block h-px w-25 bg-orange-300 shadow-app lg:my-3 lg:h-0.5">
-            {" "}
-          </span>
+
+          <span className="my-0 block h-px w-25 bg-orange-300 shadow-app sm:my-1 md:my-0 lg:my-3 lg:h-0.5 xl:my-6"></span>
+
           <p className="max-w-114 font-Dana text-[10px] sm:text-xl xl:text-2xl">
-            {" "}
             قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است
-            که در نواحی مختلف کمربند قهوه کشت میشود.{" "}
+            که در نواحی مختلف کمربند قهوه کشت میشود.
           </p>
         </div>
 
-        {/* <div className="absolute right-0 left-0 top-175"> */}
+        {/* Center Area */}
         <div className="absolute -bottom-11.25 left-1/2 z-10 h-24 w-64 -translate-x-1/2 rounded-t-[50%] bg-transparent max-md:hidden" />
 
-        {/* Outer semicircle */}
-        <div className="absolute bottom-10 left-1/2 z-11 h-30 w-60 -translate-x-1/2 rounded-t-full border border-white/25 max-md:hidden" />
+        {/* Outer Semicircle */}
+        <div className="absolute bottom-9 left-1/2 z-11 h-30 w-60 -translate-x-1/2 rounded-t-full border border-white/25 max-md:hidden" />
 
-        {/* Middle semicircle */}
-        <div className="absolute bottom-10 left-1/2 z-12 h-23 w-46 -translate-x-1/2 rounded-t-full border border-white/50 max-md:hidden" />
+        {/* Middle Semicircle */}
+        <div className="absolute bottom-9 left-1/2 z-12 h-23 w-46 -translate-x-1/2 rounded-t-full border border-white/50 max-md:hidden" />
 
-        {/* Inner semicircle */}
-        <div className="absolute bottom-10 left-1/2 z-13 h-15 w-30 -translate-x-1/2 rounded-t-full border border-white/80 max-md:hidden" />
+        {/* Inner Semicircle */}
+        <div className="absolute bottom-9 left-1/2 z-13 h-15 w-30 -translate-x-1/2 rounded-t-full border border-white/80 max-md:hidden" />
 
-        {/* Button */}
-
-        <svg
+        {/* Chevron */}
+        {/* <svg
           className="size-5"
           viewBox="0 0 24 24"
           fill="none"
@@ -103,41 +113,45 @@ function Introduction({
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-        </svg>
+        </svg> */}
 
-        {/* SVG موج */}
-        <svg
-          className="absolute bottom-0 left-0 z-20 h-15 w-full text-gray-100 max-md:hidden dark:text-zinc-800"
-          viewBox="0 0 390 60"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="
-        M0 22
-        C70 22 105 21 145 20
-        C170 19 185 16 195 0
-        C205 16 220 19 245 20
-        C285 21 320 22 390 22
-        V60
-        H0
-        Z
-      "
-            fill="currentColor"
-          />
-        </svg>
+        {/* Wave SVG */}
+<svg
+  className="absolute -bottom-px left-0 z-20 h-15 w-full text-gray-100 max-md:hidden dark:text-zinc-800"
+  viewBox="0 0 390 60"
+  preserveAspectRatio="none"
+>
+  <path
+    d="
+      M0 22
+      C35 22 75 22 110 22
+      C140 22 160 21 175 17
+      C184 14 190 7 193 0
+      C194  -2 195 -5 195 -8
+      C195 -5 196 -2 197 0
+      C200 7 206 14 215 17
+      C230 21 250 22 280 22
+      C315 22 355 22 390 22
+      V60
+      H0
+      Z
+    "
+    fill="currentColor"
+    stroke="none"
+  />
+</svg>
 
+        {/* Button */}
         <button
-          className="absolute bottom-5 left-1/2 z-30 flex size-7.5 -translate-x-1/2 items-center justify-center rounded-full border-2 border-orange-300 bg-white max-md:hidden dark:bg-zinc-700 dark:text-white cursor-pointer"
+          className="absolute bottom-6.5 left-1/2 z-30 flex size-7.5 -translate-x-1/2 cursor-pointer items-center justify-center rounded-full border-2 border-orange-300 bg-white max-md:hidden dark:bg-zinc-700 dark:text-white"
           onClick={downHandler}
         >
           <span className="block size-5">{chevronDown}</span>
         </button>
-        {/* </div> */}
       </section>
 
       <div
-        className={`fixed top-0 z-50 h-full w-64 bg-white p-3 text-amber-500 transition-all duration-500 ${open ? "right-0" : "-right-64"} dark:bg-zinc-700`}
+        className={`fixed top-0 z-50 h-full w-64 overflow-y-auto bg-white p-3 text-amber-500 transition-all duration-500 ${open ? "right-0" : "-right-74"} dark:bg-zinc-700`}
       >
         <div className="flex items-center justify-between">
           <div className="z-30 flex gap-x-4">
@@ -150,14 +164,14 @@ function Introduction({
 
           <span
             // className={`hamburger-line transition-all duration-500 ${open ? "hamburger-line-open" : ""} mr-10`}
-            className={`hamburger-line h-0.75 w-9 hamburger-line-open transition-all duration-500`}
+            className={`hamburger-line h-0.75 w-6 hamburger-line-open transition-all duration-500`}
             onClick={hamburgerHandler}
           >
             {" "}
           </span>
         </div>
 
-        <p className="mt-6 h-px w-56 bg-zinc-700"></p>
+        <p className="mt-6 h-px w-56 bg-gray-100 dark:bg-white/10"></p>
 
         <ul className="mt-4">
           {mobileItems1.map((item) => (
@@ -166,7 +180,10 @@ function Introduction({
               id={item.id}
               open={open}
               title={item.title}
+              className="text-zinc-700"
               svg={item.svg}
+              list={list}
+              setList={setList}
               selected={item.selected}
               clickHandler={() =>
                 clickHandler(
@@ -181,7 +198,7 @@ function Introduction({
           ))}
         </ul>
 
-        <p className="mt-6 h-px w-56 bg-zinc-700"></p>
+        <p className="mt-6 h-px w-56 bg-gray-100 dark:bg-white/10"></p>
 
         <ul className="mt-4">
           {mobileItems2.map((item) => (
@@ -191,6 +208,7 @@ function Introduction({
               title={item.title}
               svg={item.svg}
               selected={item.selected}
+              className="text-orange-300"
               clickHandler={() =>
                 clickHandler(
                   item.id,
@@ -223,13 +241,13 @@ function Introduction({
           </span>
         </div>
 
-        {/* <p className="mt-6 h-px w-56 bg-[#D1D5DB]"> </p> */}
+        <p className="mt-6 h-px w-56 bg-gray-300 dark:bg-white/10"> </p>
 
-        <div className="flex h-full flex-col justify-between">
-          <div className="mt-4">
+        <div className="custom-scrollbar custom-scrollbar-50 flex h-full flex-col justify-between overflow-y-auto">
+          <div className="mb-5">
             {shoppingCartItems.map((item) => (
               <div key={item.id}>
-                <p className="mt-4 h-px w-56 bg-[#D1D5DB]"></p>
+                {/* <p className="mt-4 h-px w-56 bg-[#D1D5DB]"></p> */}
 
                 <ShoppedProductBox
                   item={item}
@@ -242,9 +260,21 @@ function Introduction({
             ))}
           </div>
 
-          <RegisteredOrder fontSize="text-base" />
+          <RegisteredOrder fontSize="text-base" style="mb-12" />
         </div>
       </div>
+
+      <div
+        className={`fixed inset-0 z-45 h-full w-full bg-black/40 transition-opacity duration-300 md:hidden ${
+          open || openShoppingCart
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
+        }`}
+        onClick={() => {
+          if (open === true) setOpen(false);
+          if (openShoppingCart === true) setOpenShoppingCart(false);
+        }}
+      ></div>
     </>
   );
 }

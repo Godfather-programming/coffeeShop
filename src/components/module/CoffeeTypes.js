@@ -2,11 +2,12 @@ import categoriesImages from "@/src/constants/categoriesImages";
 import Image from "next/image";
 import React from "react";
 import PhotoType from "../elements/PhotoType";
+import Link from "next/link";
 
 function CoffeeTypes() {
   return (
     <>
-      <div className="mt-12 mb-20 space-y-8 grid md:grid-cols-2 md:gap-x-5">
+      <div className="container mt-20 grid space-y-8 md:grid-cols-2 md:gap-x-5">
         {/* <div
           className="relative h-40 w-full rounded-2xl bg-coffee-gradient bg-cover bg-center"
         >
@@ -28,14 +29,18 @@ function CoffeeTypes() {
         />
       </div>
 
-      <div className="flex flex-wrap justify-between gap-10 max-xl:justify-center">
+      <div className="container mt-10 flex flex-wrap justify-between gap-x-7.25 gap-y-6 md:gap-15 max-xl:justify-center md:mt-20">
         {categoriesImages.map((item) => (
-          <div key={item.id} className="flex w-50 h-60 flex-col items-center dark:text-white">
-            <div
-              className="h-40 w-40 bg-cover bg-center bg-no-repeat lg:w-full lg:h-full"
+          <div
+            key={item.id}
+            className="flex h-60 w-50 flex-col items-center dark:text-white"
+          >
+            <Link
+              href="#"
+              className="size-40 bg-cover bg-center bg-no-repeat md:size-50"
               style={{ backgroundImage: `url(${item.src})` }}
-            ></div>
-            <p className="mt-3 max-w-16.5 text-center font-Dana text-sm font-semibold sm:max-w-max lg:text-xl">
+            ></Link>
+            <p className="mt-2.5 max-w-16.5 text-center font-Dana text-sm font-semibold sm:max-w-max md:text-xl">
               {" "}
               {item.title}{" "}
             </p>

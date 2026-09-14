@@ -7,7 +7,7 @@ const servicesItems = [
         height="h-full"
         viewBox="0 0 109 73"
         fill="none"
-        className="size-full lg:w-30"
+        className="size-full lg:w-40 md:mt-3"
       >
         <g clipPath="url(#clip0_862_604)">
           <path

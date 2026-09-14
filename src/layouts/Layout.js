@@ -30,6 +30,8 @@ function Layout({ children }) {
           hamburgerHandler={hamburgerHandler}
           openShoppingCart={openShoppingCart}
           openShoppingCartHandler={openShoppingCartHandler}
+          setOpenShoppingCart={setOpenShoppingCart}
+          setOpen={setOpen}
         />
       </main>
       <Footer />

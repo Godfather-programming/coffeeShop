@@ -8,24 +8,41 @@ const bestSellingProducts = [
     strikethroughPrice: "175,000",
   },
   {
-    id: 4,
+    id: 2,
     number: 6,
     title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
     subTitle: "فعلا موجود نیست",
-    display: "hidden"
-  },
-  {
-    id: 2,
-    number: 7,
-    title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
-    price: "175,000",
-    display: "hidden"
+    display: "hidden",
   },
   {
     id: 3,
+    number: 7,
+    title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
+    price: "175,000",
+    display: "hidden",
+  },
+  {
+    id: 4,
     number: 8,
     title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
     price: "175,000",
+  },
+
+  {
+    id: 5,
+    number: 1,
+    discount: "12%",
+    title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
+    price: "154,000",
+    strikethroughPrice: "175,000",
+  },
+  {
+    id: 6,
+    number: 2,
+    discount: "12%",
+    title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
+    price: "154,000",
+    strikethroughPrice: "175,000",
   },
 ];
 

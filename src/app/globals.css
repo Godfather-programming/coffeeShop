@@ -1,5 +1,79 @@
 @import "tailwindcss";
 
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button,
+.custom-scrollbar::-webkit-scrollbar-button:single-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  background: transparent !important;
+}
+
+.custom-scrollbar-8::-webkit-scrollbar-track {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: transparent;
+}
+
+.custom-scrollbar-50::-webkit-scrollbar-track {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #a1a1aa;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
+
+/* Dark mode */
+/* .dark .custom-scrollbar {
+  scrollbar-color: #52525b transparent;
+} */
+
+/* .dark .custom-scrollbar::-webkit-scrollbar-button,
+.dark .custom-scrollbar::-webkit-scrollbar-button:single-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  background: transparent !important;
+}
+
+.dark .custom-scrollbar-8::-webkit-scrollbar-track {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: transparent;
+} */
+
+.dark .custom-scrollbar-50::-webkit-scrollbar-track {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  background: transparent;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #52525b;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
+
 @theme {
   /* breakpoints */
   /* --breakpoint-*: initial; */
@@ -14,7 +88,7 @@
   --color-brown-300: #dbc1ac;
   --color-brown-600: #967259;
   --color-brown-900: #634832;
-  --color-paleWhite: #FFFFFF1A;
+  --color-paleWhite: #ffffff1a;
   /* --color-primary: #fdba74; */
   /* --color-text: #3f3f46; */
   /* --color-separator: #f3f4f6; */
@@ -36,6 +110,21 @@
   /* font-size */
   --text-18: 18px;
 }
+
+@utility product {
+  /* background: linear-gradient(rgba(243, 244, 246, 1), rgba(243, 244, 246, 1)); */
+  background-color: #f3f4f6 !important;
+}
+
+/* @layer components {
+  .product {
+    background-color: red !important;
+  }
+
+  .dark .product {
+    background-color: transparent;
+  }
+} */
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -100,7 +189,7 @@
 }
 
 @utility container {
-  @apply mx-auto max-w-320 px-4 lg:px-2.5;
+  @apply mx-auto max-w-7xl px-4 lg:px-2.5;
 }
 
 @utility bg-home-mobile {

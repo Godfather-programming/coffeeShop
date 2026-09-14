@@ -15,9 +15,11 @@ function HomePage({
   hamburgerHandler,
   openShoppingCart,
   openShoppingCartHandler,
+  setOpenShoppingCart,
+  setOpen
 }) {
   return (
-    <div className="relative mt-16 font-Dana lg:mt-0">
+    <div className="relative mt-16 font-Dana md:mt-0">
       <HeaderList />
 
       <Introduction
@@ -25,6 +27,8 @@ function HomePage({
         hamburgerHandler={hamburgerHandler}
         openShoppingCart={openShoppingCart}
         openShoppingCartHandler={openShoppingCartHandler}
+        setOpenShoppingCart={setOpenShoppingCart}
+        setOpen={setOpen}
       />
 
       <Products />

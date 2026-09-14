@@ -5,7 +5,7 @@ const chevronDown = (
     viewBox="0 0 24 24"
     strokeWidth="1.5"
     stroke="currentColor"
-    className="size-5 transition-transform duration-500 group-hover:rotate-180"
+    className="size-5 transition-transform duration-500"
   >
     <path
       strokeLinecap="round"

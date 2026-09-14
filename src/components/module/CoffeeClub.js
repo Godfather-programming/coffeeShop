@@ -9,9 +9,9 @@ import CoffeeClubEventElement from "../elements/CoffeeClubEventElement";
 function CoffeeClub() {
   return (
     <section id="دیکشنری">
-      <div className="container mb-10">
-        <div className="container items-center rounded-2xl bg-[linear-gradient(90deg,#10b981_0%,#059669_100%)] px-6 py-10 text-white sm:flex sm:flex-col sm:justify-center md:flex-row lg:items-center lg:justify-between lg:px-8">
-          <div className="flex gap-x-3 max-xs:flex max-xs:flex-col max-xs:items-center max-xs:justify-center max-xs:space-y-4 max-xs:text-center">
+      <div className="container mt-8 mb-10 md:mt-15">
+        <div className="container flex flex-col md:gap-x-5 lg:gap-x-4 items-center justify-center rounded-2xl bg-linear-to-r from-emerald-500 to-emerald-600 px-3 py-10 text-white md:pl-14 md:flex-row md:justify-between lg:items-center lg:px-11">
+          <div className="flex w-full items-center justify-center gap-x-3 max-xs:flex max-xs:flex-col max-xs:items-center max-xs:justify-center max-xs:space-y-4 max-xs:text-center md:w-1/2 md:gap-x-6">
             <Image
               src="/images/diamond.png"
               width={87}
@@ -29,7 +29,7 @@ function CoffeeClub() {
             </div>
           </div>
 
-          <div className="mt-5 flex gap-x-6 max-xs:flex-col max-xs:items-center max-xs:justify-center max-xs:gap-y-5 max-xs:text-center md:gap-x-3 lg:w-1/2 lg:justify-between xl:mr-30">
+          <div className="mt-5 flex w-full justify-center gap-x-6 max-xs:flex-col max-xs:items-center max-xs:justify-center max-xs:gap-y-5 max-xs:text-center md:w-1/2 md:justify-between md:gap-x-3 lg:w-1/2 lg:justify-between xl:mr-30">
             <div className="flex gap-x-3">
               {coffeeClubEvents.map((event) => (
                 <CoffeeClubEventElement
@@ -43,10 +43,10 @@ function CoffeeClub() {
             <div className="font-Dana text-xs lg:text-sm">
               <p className="pr-2.5 text-2xl font-semibold lg:text-3xl"> 542 </p>
               <p className="pr-2.5"> امتیاز شما </p>
-              <p className="flex items-center rounded-full bg-[linear-gradient(270deg,#FDBA74_0%,#FED7AA_100%)] px-3 py-1.5 text-nowrap">
+              <p className="mt-1.5 flex items-center rounded-full bg-linear-to-r from-orange-200 to-orange-300 px-2 py-1.5 text-xs text-nowrap md:px-3 md:text-sm">
                 {" "}
                 دریافت جایزه{" "}
-                <span className="size-4"> {chevronLeft} </span>{" "}
+                <span className="size-5 md:size-6"> {chevronLeft} </span>{" "}
               </p>
             </div>
           </div>
