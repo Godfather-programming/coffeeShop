@@ -1,5 +1,6 @@
 import coffeeClubEvents from "@/src/constants/coffeeClubEvents";
 import { chevronLeft } from "@/src/constants/chevrons";
+import { BASE_PATH } from "@/src/config/site";
 import Image from "next/image";
 import React from "react";
 import CoffeeClubEventElement from "../elements/CoffeeClubEventElement";
@@ -13,7 +14,7 @@ function CoffeeClub() {
         <div className="container flex flex-col md:gap-x-5 lg:gap-x-4 items-center justify-center rounded-2xl bg-linear-to-r from-emerald-500 to-emerald-600 px-3 py-10 text-white md:pl-14 md:flex-row md:justify-between lg:items-center lg:px-11">
           <div className="flex w-full items-center justify-center gap-x-3 max-xs:flex max-xs:flex-col max-xs:items-center max-xs:justify-center max-xs:space-y-4 max-xs:text-center md:w-1/2 md:gap-x-6">
             <Image
-              src="/images/diamond.png"
+              src={`${BASE_PATH}/images/diamond.png`}
               width={87}
               height={78}
               alt="diamond-photo"

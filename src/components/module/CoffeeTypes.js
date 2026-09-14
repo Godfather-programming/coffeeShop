@@ -3,7 +3,8 @@ import Image from "next/image";
 import React from "react";
 import PhotoType from "../elements/PhotoType";
 import Link from "next/link";
-import { BASE_PATH } from "../config/site";
+import { BASE_PATH } from "@/src/config/site";
+
 
 function CoffeeTypes() {
   return (
