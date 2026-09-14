@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import PhotoType from "../elements/PhotoType";
 import Link from "next/link";
+import { BASE_PATH } from "../config/site";
 
 function CoffeeTypes() {
   return (
@@ -29,7 +30,7 @@ function CoffeeTypes() {
         />
       </div>
 
-      <div className="container mt-10 flex flex-wrap justify-between gap-x-7.25 gap-y-6 md:gap-15 max-xl:justify-center md:mt-20">
+      <div className="container mt-10 flex flex-wrap justify-between gap-x-7.25 gap-y-6 max-xl:justify-center md:mt-20 md:gap-15">
         {categoriesImages.map((item) => (
           <div
             key={item.id}
@@ -38,7 +39,7 @@ function CoffeeTypes() {
             <Link
               href="#"
               className="size-40 bg-cover bg-center bg-no-repeat md:size-50"
-              style={{ backgroundImage: `url(${item.src})` }}
+              style={{ backgroundImage: `url(${`${BASE_PATH}/${item.src}`})` }}
             ></Link>
             <p className="mt-2.5 max-w-16.5 text-center font-Dana text-sm font-semibold sm:max-w-max md:text-xl">
               {" "}

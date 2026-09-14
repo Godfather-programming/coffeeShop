@@ -1,4 +1,5 @@
 import { appLogoType, arrowLeft } from "@/src/constants/homePageSvgs";
+import { BASE_PATH } from "@/src/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -12,7 +13,7 @@ function Article({ number, title, dateNumber, dateMonth, date }) {
           <span className="block h-9.5 w-35"> {appLogoType} </span>{" "}
         </div>
         <Image
-          src={`/images/blogs/blog-${number}.png`}
+          src={`${BASE_PATH}/images/blogs/blog-${number}.png`}
           alt="reading-article"
           width={110}
           height={110}

@@ -1,5 +1,6 @@
 import { headerShoppingCartSvg } from "@/src/constants/headerSvgs";
 import { arrowsRightLeft, star } from "@/src/constants/homePageSvgs";
+import { BASE_PATH } from "@/src/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -33,7 +34,7 @@ function ProductCard({
             width={128}
             height={128}
             loading="lazy"
-            src={`/images/products/p${number}.png`}
+            src={`${BASE_PATH}/images/products/p${number}.png`}
             className="h-full w-full"
           />{" "}
         </Link>

@@ -1,3 +1,5 @@
+
+
 const categoriesImages = [
   { id: 1, src: "/images/categories/category1.png", title: "قهوه دمی و اسپرسو" },
   { id: 2, src: "/images/categories/category2.png", title: "لوازم جانبی و تجهیزات"},

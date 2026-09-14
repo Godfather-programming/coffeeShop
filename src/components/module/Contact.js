@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BASE_PATH } from "@/src/config/site";
 import React from "react";
 import { TbPhoneCalling } from "react-icons/tb";
 import Services from "./AboutUs";
@@ -14,7 +15,7 @@ function Contact() {
               width={120}
               height={120}
               alt="contact-photo"
-              src="/images/contact.png"
+              src={`${BASE_PATH}/images/contact.png`}
               className="h-full w-full object-contain md:object-fill lg:object-contain object-center"
             />
           </div>
